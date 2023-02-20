@@ -21,11 +21,8 @@ class Swiper extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.max,
+      verticalDirection: VerticalDirection.up,
       children: [
-        Expanded(
-          child: AppinioSwiper(
-              controller: controller, cards: cards, onSwipe: onSwipe),
-        ),
         Padding(
             padding:
                 const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
@@ -36,6 +33,10 @@ class Swiper extends StatelessWidget {
                   style: LocalTextStyles.button
                       .stylize(LocalColorStyles.accent.value),
                 ))),
+        Expanded(
+          child: AppinioSwiper(
+              controller: controller, cards: cards, onSwipe: onSwipe),
+        )
       ],
     );
   }

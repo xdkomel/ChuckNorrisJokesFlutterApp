@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Widgets/jokes.dart';
+import 'package:flutter_application_1/styles/color_styles.dart';
 
 void main() {
   runApp(const Main());
@@ -9,12 +10,12 @@ class Main extends StatelessWidget {
   const Main({super.key});
 
   @override
-  Widget build(BuildContext context) => const MaterialApp(
+  Widget build(BuildContext context) => MaterialApp(
         home: Scaffold(
-          body: SafeArea(
+          body: const SafeArea(
             child: Jokes(),
           ),
-          backgroundColor: Color.fromRGBO(245, 245, 245, 1),
+          backgroundColor: LocalColorStyles.background.value,
         ),
       );
 }
