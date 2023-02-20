@@ -4,7 +4,7 @@ import 'package:flutter_application_1/Widgets/joke_card.dart';
 import 'package:flutter_application_1/widgets/next_button.dart';
 
 class Swiper extends StatelessWidget {
-  Swiper(
+  const Swiper(
       {super.key,
       required this.controller,
       required this.cards,

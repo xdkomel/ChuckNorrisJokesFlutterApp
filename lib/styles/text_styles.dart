@@ -14,13 +14,13 @@ class TextStylizingActions {
       fontWeight: FontWeight.w400,
       color: color);
   static TextStyle headingStyle(Color color) => TextStyle(
-      fontSize: 32.0,
+      fontSize: 36.0,
       height: 1.2,
       letterSpacing: -0.5,
       fontWeight: FontWeight.w400,
       color: color);
   static TextStyle boldHeadingStyle(Color color) => TextStyle(
-      fontSize: 32.0,
+      fontSize: 36.0,
       height: 1.2,
       letterSpacing: -0.5,
       fontWeight: FontWeight.w600,

@@ -4,6 +4,12 @@ import 'package:dio/dio.dart';
 import 'package:flutter_application_1/API/joke_model.dart';
 
 class API {
+  static final API _api = API._internal();
+  factory API() {
+    return _api;
+  }
+  API._internal();
+
   static final Dio dio = Dio();
 
   static Future<JokeModel?> upload() async {
