@@ -2,7 +2,7 @@ import 'dart:developer' as developer;
 
 import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/API/API.dart';
+import 'package:flutter_application_1/API/api.dart';
 import 'package:flutter_application_1/Widgets/joke_card.dart';
 import 'package:flutter_application_1/widgets/bad_internet_connection.dart';
 import 'package:flutter_application_1/widgets/swiper.dart';

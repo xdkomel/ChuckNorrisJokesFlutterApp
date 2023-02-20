@@ -25,7 +25,7 @@ class BadInternetConnection extends StatelessWidget {
               height: 8,
             ),
             Text(
-              "Check your internet connection, couldn\'t load more cards...",
+              "Check your internet connection, couldn't load more cards...",
               textAlign: TextAlign.center,
               style: LocalTextStyles.boldHeading
                   .stylize(LocalColorStyles.darkGray.value),
