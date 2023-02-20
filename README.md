@@ -48,7 +48,9 @@ There are no such paramemeter as `z-index` in Flutter, and it was surprising to 
 
 Another case is to show the "Check you internet connection" message, when no cards are left in the deck. The library I used had an `onEnd` callback, which couldn't consider cases when the user has no internet connection initially. The genius idea is to make this view persistent, but put under the cards. So when the cards end... there it is! The most natural and easy behavior.
 
+# APK
 
+Here is the [download link](https://disk.yandex.com/d/RpLUx84w61nY-Q)
 
 
 
