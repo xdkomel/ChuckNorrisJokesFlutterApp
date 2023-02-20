@@ -1,11 +1,10 @@
 import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Widgets/joke_card.dart';
-import 'package:flutter_application_1/styles/color_styles.dart';
-import 'package:flutter_application_1/styles/text_styles.dart';
+import 'package:flutter_application_1/widgets/next_button.dart';
 
 class Swiper extends StatelessWidget {
-  const Swiper(
+  Swiper(
       {super.key,
       required this.controller,
       required this.cards,
@@ -23,16 +22,7 @@ class Swiper extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       verticalDirection: VerticalDirection.up,
       children: [
-        Padding(
-            padding:
-                const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
-            child: TextButton(
-                onPressed: swipeNext,
-                child: Text(
-                  "Next",
-                  style: LocalTextStyles.button
-                      .stylize(LocalColorStyles.accent.value),
-                ))),
+        NextButton(swipeNext: swipeNext),
         Expanded(
           child: AppinioSwiper(
               controller: controller, cards: cards, onSwipe: onSwipe),
