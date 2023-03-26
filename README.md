@@ -6,6 +6,13 @@ This application was done while the CPMDWithF course 2023 in the Innopolis Unive
 
 This application provides smooth and entertaining way to view random jokes from the [Chuck Norris Jokes API](https://api.chucknorris.io/). The only interface element is a stack of cards, which could be swiped away. Each card could be opened in the browser if double tapped.
 
+
+<p float="left">
+<img src="https://user-images.githubusercontent.com/35888414/220069464-554ae61c-24ad-43b2-8d17-5a06d4459162.png" width=300 alt="Card with a joke" />
+<img src="https://user-images.githubusercontent.com/35888414/220069460-953344a0-9fd5-44a8-97fc-7b3913b18087.png" width=300 alt="Card when tapped once" />
+<img src="https://user-images.githubusercontent.com/35888414/220069458-102d82a5-3316-4f00-8224-bc00e781b5b8.png" width=300 alt="When no cards left" />
+</p>
+
 ## Code
 
 Here I will explain ordinary, hard or interesting code solutions made in this Flutter project.
@@ -32,13 +39,18 @@ Well, these are just enums with constant properties.
 
 The length of jokes could be very different, and sometimes it's to long to be shown with the default 36 dp size. So I used the [AutoSizeText](https://pub.dev/packages/auto_size_text) library to show long jokes with minimum 18 dp font size, which is much more than enough.
 
+<img src="https://user-images.githubusercontent.com/35888414/220069451-bee81d81-aa27-4cb2-ae1e-3157dcb295fa.png" width=300 alt="Card with a long joke text" />
+</p>
+
 ### Z-index focuses 
 
 There are no such paramemeter as `z-index` in Flutter, and it was surprising to realize that in order to make joke cards "higher" than the "Next" button, you have to make Flutter draw from the bottom. So I used a `Column`, and provided its children bottom-up, and this is how cards are displayed over the Next button, when you drag them. This is a bit weird solution, because I thought this option exists only for the cases, when your interface details need to be shown bottom-up like in a message history.
 
 Another case is to show the "Check you internet connection" message, when no cards are left in the deck. The library I used had an `onEnd` callback, which couldn't consider cases when the user has no internet connection initially. The genius idea is to make this view persistent, but put under the cards. So when the cards end... there it is! The most natural and easy behavior.
 
+# APK
 
+Here is the [download link](https://disk.yandex.com/d/RpLUx84w61nY-Q)
 
 
 
