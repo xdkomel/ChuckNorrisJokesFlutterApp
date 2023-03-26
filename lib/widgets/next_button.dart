@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../styles/color_styles.dart';
 import '../styles/text_styles.dart';
 
 class NextButton extends StatelessWidget {
-  const NextButton({super.key, required this.swipeNext});
+  const NextButton(
+      {super.key,
+      required this.swipeNext,
+      required this.text,
+      required this.color});
   final VoidCallback swipeNext;
+  final String text;
+  final Color color;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -13,8 +18,7 @@ class NextButton extends StatelessWidget {
       child: TextButton(
           onPressed: swipeNext,
           child: Text(
-            "Next",
-            style:
-                LocalTextStyles.button.stylize(LocalColorStyles.accent.value),
+            text,
+            style: LocalTextStyles.button.stylize(color),
           )));
 }

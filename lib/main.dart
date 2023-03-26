@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Widgets/jokes.dart';
 import 'package:flutter_application_1/styles/color_styles.dart';
 
-void main() {
+void main() async {
   runApp(const Main());
 }
 
