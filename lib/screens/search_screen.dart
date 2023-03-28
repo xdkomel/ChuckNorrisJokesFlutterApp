@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/api/search_results_model.dart';
+import 'package:flutter_application_1/view_controllers/search_screen_controller.dart';
 import 'package:flutter_application_1/widgets/search_results_list.dart';
 import 'package:localization/localization.dart';
 
-import '../API/api.dart';
 import '../styles/color_styles.dart';
 import '../styles/text_styles.dart';
 
@@ -15,13 +15,13 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  final TextEditingController textEditingController = TextEditingController();
+  final controller = SearchScreenController();
   String? errorMessage;
   SearchResultsModel? results;
 
   @override
   void dispose() {
-    textEditingController.dispose();
+    controller.textEditingController.dispose();
     super.dispose();
   }
 
@@ -44,35 +44,21 @@ class _SearchScreenState extends State<SearchScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
               child: TextField(
-                  controller: textEditingController,
+                  controller: controller.textEditingController,
                   autofocus: true,
                   autocorrect: false,
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
                       border: const OutlineInputBorder(),
                       hintText: "search-hint".i18n()),
-                  onTapOutside: (_) {
-                    FocusManager.instance.primaryFocus?.unfocus();
-                  },
+                  onTapOutside: controller.unfocus,
                   onEditingComplete: () async {
-                    if (textEditingController.text.length < 3) {
-                      setState(() {
-                        errorMessage = "short-text-error".i18n();
-                      });
-                    } else {
-                      final newData =
-                          await API.search(textEditingController.text);
-                      if (newData == null) {
-                        setState(() {
-                          errorMessage = "check-internet-connection".i18n();
-                        });
-                      } else {
-                        setState(() {
-                          results = newData;
-                          errorMessage = null;
-                        });
-                      }
-                    }
+                    final searchResults = await controller
+                        .search(controller.textEditingController.text);
+                    setState(() {
+                      results = searchResults.item1;
+                      errorMessage = searchResults.item2;
+                    });
                   }),
             ),
             SearchResultsList(
