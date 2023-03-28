@@ -11,7 +11,8 @@ This application provides smooth and entertaining way to view random jokes from 
 <img src="https://user-images.githubusercontent.com/35888414/228321713-42edc402-d558-466b-a8ce-685a69cc524c.png" width=350 alt="Card when tapped once" />
 <img src="https://user-images.githubusercontent.com/35888414/228321845-d0450278-3cda-40e9-b856-f8e97a8755ef.png" width=350 alt="When no cards left" />
 </p>
-More images and a video are available [by the link](https://disk.yandex.com/d/Wy6rFUO5Ex2WyA).
+
+More images and a video are available [by this link](https://disk.yandex.com/d/Wy6rFUO5Ex2WyA/).
 
 ## Code
 
@@ -53,7 +54,7 @@ Another case is to show the "Check you internet connection" message, when no car
 
 # APK
 
-Here is the [download link](https://disk.yandex.com/d/RpLUx84w61nY-Q)
+Here is the [download link](https://disk.yandex.com/d/Wy6rFUO5Ex2WyA/)
 
 
 
