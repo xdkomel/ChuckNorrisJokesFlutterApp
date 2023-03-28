@@ -7,9 +7,9 @@ This application was done while the CPMDWithF course 2023 in the Innopolis Unive
 This application provides smooth and entertaining way to view random jokes from the [Chuck Norris Jokes API](https://api.chucknorris.io/), search them, and then store favourite ones on the phone. The main screen's interface element is a stack of cards, which could be swiped away. Each card could be opened in the browser if double tapped. If you swipe a card to the right, it is then added to the favourites and persisted on the device's storage. The app is available in English and Tatar languages, but due to problems with localization support it is used when the system language is russian, and the region is set to Russia.
 
 <p float="left">
-<img src="https://user-images.githubusercontent.com/35888414/228321688-07b86735-2a19-4ece-a53f-2c9a4d3baabf.png" width=300 alt="Card with a joke" />
-<img src="https://user-images.githubusercontent.com/35888414/228321713-42edc402-d558-466b-a8ce-685a69cc524c.png" width=300 alt="Card when tapped once" />
-<img src="https://user-images.githubusercontent.com/35888414/228321845-d0450278-3cda-40e9-b856-f8e97a8755ef.png" width=300 alt="When no cards left" />
+<img src="https://user-images.githubusercontent.com/35888414/228321688-07b86735-2a19-4ece-a53f-2c9a4d3baabf.png" width=280 alt="Card with a joke" />
+<img src="https://user-images.githubusercontent.com/35888414/228321713-42edc402-d558-466b-a8ce-685a69cc524c.png" width=280 alt="Card when tapped once" />
+<img src="https://user-images.githubusercontent.com/35888414/228321845-d0450278-3cda-40e9-b856-f8e97a8755ef.png" width=280 alt="When no cards left" />
 </p>
 More images and a video are available [by the link](https://disk.yandex.com/d/Wy6rFUO5Ex2WyA).
 
