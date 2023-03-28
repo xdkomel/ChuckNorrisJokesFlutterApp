@@ -5,11 +5,11 @@ part 'search_results_model.g.dart';
 
 @JsonSerializable()
 class SearchResultsModel {
-  final String total;
+  final int total;
 
-  final List<JokeModel> results;
+  final List<JokeModel> result;
 
-  SearchResultsModel(this.total, this.results);
+  SearchResultsModel(this.total, this.result);
 
   factory SearchResultsModel.fromJson(Map<String, dynamic> json) =>
       _$SearchResultsModelFromJson(json);

@@ -15,15 +15,15 @@ class LocalStorage {
     WidgetsFlutterBinding.ensureInitialized();
     final directory = await getApplicationDocumentsDirectory();
     await Hive.initFlutter(directory.path);
-    await Hive.openBox<List<JokeModel>>(_boxName);
+    await Hive.openBox<List>(_boxName);
   }
 
   void close() {
     _getBox().close();
   }
 
-  Box<List<JokeModel>> _getBox() {
-    return Hive.box<List<JokeModel>>(_boxName);
+  Box<List> _getBox() {
+    return Hive.box<List>(_boxName);
   }
 
   void put(JokeModel joke) {
@@ -32,6 +32,10 @@ class LocalStorage {
       jokes.add(joke);
       _getBox().put(_key, jokes);
     }
+  }
+
+  List<JokeModel>? get() {
+    return _getBox().get(_key, defaultValue: [])?.cast<JokeModel>();
   }
 
   void printStorage() {

@@ -28,6 +28,7 @@ class API {
   }
 
   static Future<SearchResultsModel?> search(String query) async {
+    query = query.trim();
     try {
       final response = await _dio
           .get('https://api.chucknorris.io/jokes/search?query=$query');

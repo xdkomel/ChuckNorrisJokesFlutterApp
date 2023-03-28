@@ -30,8 +30,8 @@ class JokeModel extends HiveObject {
   @HiveField(6)
   final String value;
 
-  JokeModel(this.value, this.url, this.categories, this.createdAt, this.iconUrl,
-      this.id, this.updatedAt);
+  JokeModel(this.categories, this.createdAt, this.iconUrl, this.id,
+      this.updatedAt, this.url, this.value);
 
   factory JokeModel.fromJson(Map<String, dynamic> json) =>
       _$JokeModelFromJson(json);

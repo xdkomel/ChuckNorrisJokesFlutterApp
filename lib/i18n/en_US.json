@@ -1,0 +1,13 @@
+{
+  "no-favourites": "You have no\nfavourite jokes",
+  "check-internet-connection": "Check your internet connection, couldn't load more cards...",
+  "dislike": "Dislike",
+  "like": "Like",
+  "favourites": "Favourites",
+  "search": "Search",
+  "close": "Close",
+  "double-tap": "Double tap to open the joke in browser",
+  "search-hint": "Search jokes",
+  "found-amount": "%s found:",
+  "short-text-error": "Your search query is too short"
+}

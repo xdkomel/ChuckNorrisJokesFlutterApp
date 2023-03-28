@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:localization/localization.dart';
 
 import '../styles/color_styles.dart';
 import '../styles/text_styles.dart';
@@ -22,7 +23,7 @@ class CardOverlay extends StatelessWidget {
           color: LocalColorStyles.accent.value.withOpacity(0.8),
           borderRadius: const BorderRadius.all(Radius.circular(16.0)),
         ),
-        child: Text("Double tap to open the joke in browser",
+        child: Text("double-tap".i18n(),
             style: LocalTextStyles.body.stylize(Colors.white)),
       ),
     );
