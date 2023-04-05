@@ -32,6 +32,13 @@ But there are still some problems with the library present. For example, each ca
 
 This state management approach is used for the main jokes screen. There is a whole controller class for the jokes screen, which holds a provider of the `JokeCard`s list. The architecture used here is MVC, so the app has two view controllers: for the jokes cards screen, and for the jokes search screen. 
 
+### Languages
+
+The app is localized for the english and tatar.
+
+### Persistence
+The app uses Hive to store favourite jokes.
+
 ### Local Text Styles
 
 The text styles are stored in an `enum`. Each has its own `stylize` function which takes a color, and returns the text style. The main problem was to initialize a constant function, that could be taken by the `enum`, and the only option is to create an auxiliary class with static methods, the `enum` could reference to. The reason for creating such a complexe structure (instead of just `const TextStyle style`) is to be independentant from colors while using the local text styles.
